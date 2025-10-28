@@ -1,9 +1,9 @@
-FROM moby/buildkit:v0.23.2
+FROM moby/buildkit:v0.25.1
 
 LABEL maintainer="KRCI Team"
 
-RUN apk add --no-cache curl=8.12.1-r1 \
-                       jq=1.7.1-r0
+RUN apk add --no-cache curl=8.14.1-r2 \
+                       jq=1.8.0-r0
 
 RUN curl -Lo /usr/local/bin/docker-credential-ecr-login \
     https://amazon-ecr-credential-helper-releases.s3.us-east-2.amazonaws.com/0.10.1/linux-amd64/docker-credential-ecr-login && \
